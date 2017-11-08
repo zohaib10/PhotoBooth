@@ -1,0 +1,48 @@
+<!-- Zohaib Ahmad, Fareeha Ahmed, Awais Raza, Uzair Farooq - ECS189H - Assignment 5 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Photobooth</title>
+        <link rel="stylesheet" type="text/css" href="photobooth1.css">
+    </head>
+
+<body onload = "dumpDataBase()">
+    <header>
+            <h2>PHOTOBOOTH.</h2>
+        </header>
+
+        <main>
+
+           <nav>
+                <button onclick="uploadExpand()" id="upload"></button>
+                <div id="upload1">
+                    <button onclick="uploadThisFile(this)" id = "fileSelector">choose file...</button>
+                    <input onchange="uploadFile()" type="file" id="myFile">
+                    <p>name of file</p>
+                    <button onclick="clickedUpload(this)">upload</button>
+                    <button onclick="closeCalled()">close</button>
+                </div>
+
+              <button onclick="filterExpand()" id= "filter"></button>
+               <div id="filter1">
+                    <input type="text" placeholder="filter"/>
+                    <br>
+                    <button onclick = "clickedOnFilter(this)">enter</button>
+                    <button onclick = "clearFilter(this)">clear filter</button>
+               </div>
+
+            <button onclick = "clickedOnFilter(this)" id="fav">☆</button>
+            </nav>
+
+            <div id="pictures">
+               <div id="inPictures">
+               </div>
+
+            </div>
+        </main>
+        <script src= "photobooth.js"></script>
+    </body>
+</html>
